@@ -77,13 +77,6 @@ con = st.button("🔍 predict depression")
 if con:
     result = Data.predict(df)
     if result == 1:
-        st.write("The student is likely to be depressed.")
+        st.write("The student is likely to be depressed. 😌")
     else:
-        st.write("The student is not likely to be depressed.")
-
-# Optional: Display saved data
-if st.button("Show All User Data"):
-    if 'user_data_list' in st.session_state and st.session_state['user_data_list']:
-        st.write(pd.DataFrame(st.session_state['user_data_list']))
-    else:
-        st.write("No user data saved yet.")
+        st.write("The student is not likely to be depressed. 😌")
