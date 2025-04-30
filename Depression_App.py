@@ -77,6 +77,6 @@ con = st.button("🔍 predict depression")
 if con:
     result = Data.predict(df)
     if result == 1:
-        st.write("The student is likely to be depressed. 😌")
+        st.write("The student is likely to be depressed. 😢")
     else:
         st.write("The student is not likely to be depressed. 😌")
