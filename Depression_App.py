@@ -11,7 +11,7 @@ st.markdown('Predict whether a student is depressed based on various attributes.
 
 # Input Form
 st.markdown("---")
-st.subheader("📝 Enter Student Features:")
+st.subheader("📝 Enter Student Data:")
 Academic_Pressure = st.number_input("📚 Academic Pressure (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
 
 Study_Satisfaction = st.number_input("😌 Study Satisfaction (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
