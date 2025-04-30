@@ -5,8 +5,13 @@ import pickle
 
 Data = pickle.load(open('milestone_4 (deployment)/model.sav', 'rb'))
 
-st.title("Depression Prediction App")
+st.set_page_config(page_title="Student Depression", page_icon="🧠", layout="wide")
+st.title("Student Depression Prediction App")
+st.markdown('Predict whether a student is depressed based on various attributes.')
 
+# Input Form
+st.markdown("---")
+st.subheader("📝 Enter Student Attributes:")
 Academic_Pressure = st.number_input("Academic Pressure (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
 
 Study_Satisfaction = st.number_input("Study Satisfaction (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
