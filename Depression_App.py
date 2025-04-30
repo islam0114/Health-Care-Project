@@ -33,7 +33,7 @@ mapping_3 = {'No': 0, 'Yes': 1}
 Bullying = st.selectbox('😢 Bullying', list(mapping_3.keys()))
 Bullying = mapping_3[Bullying]
 
-PHQ_9 = st.number_input("📋 PHQ-9 (0 ==> 27)", min_value=0.0, max_value=27.0,step=1,help = "is a 9-item questionnaire used to assess the severity of depression in individuals.")
+PHQ_9 = st.number_input("📋 PHQ-9 (0 ==> 20)", min_value=0.0, max_value=20.0,step=1,help = "is a 9-item questionnaire used to assess the severity of depression in individuals.")
 st.markdown("to do PHQ-9 test: [Link](https://psychology-tools.com/test/phq-9)")
 
 Cortisol_Level = st.number_input("😰 Cortisol Level (0 ==> 10)", min_value=0.0, max_value=10.0,step=0.01,help = "is a hormone produced by the adrenal glands, often referred to as the 'stress hormone.' It helps in regulating metabolism, controlling blood sugar levels, reducing inflammation, and managing stress.")
