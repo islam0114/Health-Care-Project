@@ -12,28 +12,28 @@ st.markdown('Predict whether a student is depressed based on various attributes.
 # Input Form
 st.markdown("---")
 st.subheader("📝 Enter Student Attributes:")
-Academic_Pressure = st.number_input("Academic Pressure (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
+Academic_Pressure = st.number_input("📚 Academic Pressure (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
 
-Study_Satisfaction = st.number_input("Study Satisfaction (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
+Study_Satisfaction = st.number_input("😌 Study Satisfaction (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
 
 mapping_1 = {'Healthy': 0, 'Moderate': 1, "Unhealthy": 2}
 mapping_2 = {'Yes': 0, 'No': 1}
 
-Dietary_Habits_choice = st.selectbox('Dietary Habits', list(mapping_1.keys()))
-Have_you_ever_had_suicidal_thoughts_choice = st.selectbox('Have you ever had suicidal thoughts ?', list(mapping_2.keys()))
+Dietary_Habits_choice = st.selectbox('🍽️ Dietary Habits', list(mapping_1.keys()))
+Have_you_ever_had_suicidal_thoughts_choice = st.selectbox('🌧️ Have you ever had suicidal thoughts ?', list(mapping_2.keys()))
 
 Dietary_Habits = mapping_1[Dietary_Habits_choice]
 Have_you_ever_had_suicidal_thoughts = mapping_2[Have_you_ever_had_suicidal_thoughts_choice]
 
-Work_Study_Hours = st.number_input("Study Hours (0 ==> 12)", min_value=0.0, max_value=12.0,step=0.01)
+Work_Study_Hours = st.number_input("🕒 Study Hours (0 ==> 12)", min_value=0.0, max_value=12.0,step=0.01)
 
-Financial_Stress = st.number_input("Financial Stress (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
+Financial_Stress = st.number_input("💰 Financial Stress (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
 
-Bullying = st.number_input("Bullying (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
+Bullying = st.number_input("😢 Bullying (0 ==> 5)", min_value=0.0, max_value=5.0,step=0.01)
 
-PHQ_9 = st.number_input("PHQ-9 (0 ==> 10)", min_value=0.0, max_value=10.0,step=0.01,help = "is a 9-item questionnaire used to assess the severity of depression in individuals.")
+PHQ_9 = st.number_input("📋 PHQ-9 (0 ==> 10)", min_value=0.0, max_value=10.0,step=0.01,help = "is a 9-item questionnaire used to assess the severity of depression in individuals.")
 
-Cortisol_Level = st.number_input("Cortisol Level (0 ==> 10)", min_value=0.0, max_value=10.0,step=0.01,help = "is a hormone produced by the adrenal glands, often referred to as the 'stress hormone.' It helps in regulating metabolism, controlling blood sugar levels, reducing inflammation, and managing stress.")
+Cortisol_Level = st.number_input("😰 Cortisol Level (0 ==> 10)", min_value=0.0, max_value=10.0,step=0.01,help = "is a hormone produced by the adrenal glands, often referred to as the 'stress hormone.' It helps in regulating metabolism, controlling blood sugar levels, reducing inflammation, and managing stress.")
 
 df = pd.DataFrame({
     "Academic_Pressure": [Academic_Pressure],
